@@ -1,23 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import {Visualization} from "./Components/Visualization";
+import {VisualizationSettings} from "./Components/VisualizationSettings";
 
 function App() {
   return <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo"/>
-      <p id='test'>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
-      <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-    </header>
+    <body>
+      <Visualization/>
+      <VisualizationSettings/>
+    </body>
   </div>;
 }
 
