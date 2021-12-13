@@ -1,41 +1,13 @@
-// import * as d3 from 'd3';
-import React, {RefObject} from "react";
-// import {count, DSVRowArray} from "d3";
 import {Bar, BarChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
 import moment from 'moment';
+import React from "react";
 
 const dateFormatter = (item: moment.MomentInput) => moment(item).format("MMM YY");
 
 export class Visualization extends React.Component {
-    private myRef: RefObject<HTMLDivElement>;
-    private dataset;
 
     constructor(props: {}) {
         super(props);
-        this.myRef = React.createRef();
-        this.dataset = [100, 200, 300, 400, 500];
-
-    }
-
-    componentDidMount() {
-        // let size = 500;
-        // let svg = d3.select(this.myRef.current)
-        //     .append('svg')
-        //     .attr('width', size)
-        //     .attr('height', size);
-        //
-        // let rect_width = 95;
-        // svg.selectAll('rect')
-        //     .data(this.dataset)
-        //     .enter()
-        //     .append('rect')
-        //     .attr('x', (d, i) => 5 + i*(rect_width + 5))
-        //     .attr('y', d => size - d)
-        //     .attr('width', rect_width)
-        //     .attr('height', d => d)
-        //     .attr('fill', 'teal');
-
-
     }
 
     render() {
@@ -75,8 +47,6 @@ export class Visualization extends React.Component {
                     <Bar dataKey="count" fill="rgba(106, 110, 229)"/>
                 </BarChart>
             </ResponsiveContainer>
-            {/*<BarChart/>*/}
-            {/*<img src='https://i.ibb.co/DGnv0zZ/image.png' alt='visImage' className='vis-image'/>*/}
         </div>;
     }
 }
