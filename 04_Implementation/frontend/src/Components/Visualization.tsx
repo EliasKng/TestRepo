@@ -67,18 +67,17 @@ export class Visualization extends React.Component {
             {category: "2020-11-01T00:00:00.000", x: "2020-11-01T00:00:00.000", count: 174},
             {category: "2020-12-01T00:00:00.000", x: "2020-12-01T00:00:00.000", count: 150},
         ];
-        
-        
-        
+
+
         return <div className='visualization'>
             <h2>Visualization</h2>
             <div ref={this.myRef}>
-                <ResponsiveContainer width="100%" height="100%">
+                <ResponsiveContainer width="100%" height={500}>
                     <BarChart data={data}>
-                        <XAxis dataKey="x" tickFormatter={dateFormatter} />
-                        <YAxis />
-                        <Tooltip labelFormatter={dateFormatter} />
-                        <Bar dataKey="count" fill="rgba(106, 110, 229)" />
+                        <XAxis dataKey="x" tickFormatter={dateFormatter}/>
+                        <YAxis/>
+                        <Tooltip labelFormatter={dateFormatter}/>
+                        <Bar dataKey="count" fill="rgba(106, 110, 229)"/>
                     </BarChart>
                 </ResponsiveContainer>
 
@@ -86,49 +85,5 @@ export class Visualization extends React.Component {
             {/*<BarChart/>*/}
             {/*<img src='https://i.ibb.co/DGnv0zZ/image.png' alt='visImage' className='vis-image'/>*/}
         </div>;
-    }
-
-
-    private exampleData = () => {
-        return [
-            {
-                key: "Cumulative Return",
-                values: [
-                    {
-                        "label": "A Label",
-                        "value": -29.765957771107
-                    },
-                    {
-                        "label": "B Label",
-                        "value": 0
-                    },
-                    {
-                        "label": "C Label",
-                        "value": 32.807804682612
-                    },
-                    {
-                        "label": "D Label",
-                        "value": 196.45946739256
-                    },
-                    {
-                        "label": "E Label",
-                        "value": 0.19434030906893
-                    },
-                    {
-                        "label": "F Label",
-                        "value": -98.079782601442
-                    },
-                    {
-                        "label": "G Label",
-                        "value": -13.925743130903
-                    },
-                    {
-                        "label": "H Label",
-                        "value": -5.1387322875705
-                    }
-                ]
-            }
-        ]
-
     }
 }
