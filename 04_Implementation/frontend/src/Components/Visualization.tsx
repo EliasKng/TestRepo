@@ -37,8 +37,6 @@ export class Visualization extends React.Component {
 
 
     }
-    
-    
 
     render() {
         const data = [
@@ -68,20 +66,15 @@ export class Visualization extends React.Component {
             {category: "2020-12-01T00:00:00.000", x: "2020-12-01T00:00:00.000", count: 150},
         ];
 
-
         return <div className='visualization'>
-            <h2>Visualization</h2>
-            <div ref={this.myRef}>
-                <ResponsiveContainer width="100%" height={500}>
-                    <BarChart data={data}>
-                        <XAxis dataKey="x" tickFormatter={dateFormatter}/>
-                        <YAxis/>
-                        <Tooltip labelFormatter={dateFormatter}/>
-                        <Bar dataKey="count" fill="rgba(106, 110, 229)"/>
-                    </BarChart>
-                </ResponsiveContainer>
-
-            </div>
+            <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={data}>
+                    <XAxis dataKey="x" tickFormatter={dateFormatter}/>
+                    <YAxis/>
+                    <Tooltip labelFormatter={dateFormatter}/>
+                    <Bar dataKey="count" fill="rgba(106, 110, 229)"/>
+                </BarChart>
+            </ResponsiveContainer>
             {/*<BarChart/>*/}
             {/*<img src='https://i.ibb.co/DGnv0zZ/image.png' alt='visImage' className='vis-image'/>*/}
         </div>;
