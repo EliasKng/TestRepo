@@ -1,7 +1,6 @@
-import React, { Component, Fragment } from 'react';
-
+import React, {Component, Fragment} from 'react';
 import Select from 'react-select';
-import { colourOptions } from './data/data';
+import {colourOptions} from './data/data';
 
 interface State {
 	readonly isClearable: boolean;
@@ -18,7 +17,7 @@ export interface SelectOption {
 	readonly isDisabled?: boolean;
 }
 
-export default class SingleSelect extends Component<{}, State> {
+export default class SingleSelect extends Component<Record<string, unknown>, State> {
 	state: State = {
 		isClearable: true,
 		isDisabled: false,
@@ -28,10 +27,8 @@ export default class SingleSelect extends Component<{}, State> {
 	};
 
 	render() {
-
-		const { isClearable, isSearchable, isDisabled, isLoading, isRtl } =
+		const {isClearable, isSearchable, isDisabled, isLoading, isRtl} =
 			this.state;
-
 		return (
 			<Fragment>
 				<Select
