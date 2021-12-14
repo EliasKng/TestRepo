@@ -13,6 +13,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/recharts": "^1.8.23",
+    "browserslist": "^4.19.0",
     "d3": "^7.2.1",
     "eslint-plugin-unused-imports": "^2.0.0",
     "react": "^17.0.2",
