@@ -84,6 +84,7 @@ module.exports = {
     '@typescript-eslint/no-var-requires': [WARN],
     '@typescript-eslint/no-use-before-define': [OFF],
     '@typescript-eslint/no-empty-function': [OFF],
+    '@typescript-eslint/naming-convention': [OFF],
     // '@typescript-eslint/naming-convention': [ERROR, {
     //   selector: 'default',
     //   format: ['camelCase'],
@@ -134,6 +135,7 @@ module.exports = {
       after: true,
     }],
     // '@typescript-eslint/explicit-module-boundary-types': [ERROR],
+    '@typescript-eslint/explicit-module-boundary-types': [OFF],
     'unused-imports/no-unused-imports': ERROR,
     'no-var': [ERROR],
     'object-curly-spacing': [ERROR, 'never'],
